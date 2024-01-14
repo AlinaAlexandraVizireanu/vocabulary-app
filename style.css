@@ -14,6 +14,7 @@ body {
 .container {
   width: 70%;
   margin: 0 auto;
+  margin-top: 1em;
 }
 
 .logo_container {
@@ -28,33 +29,68 @@ body {
   height: 30px;
   border-radius: 25px;
   background-color: #3d5a80;
-  transition: background .3s;
+  transition: background 0.3s;
   outline: none;
   cursor: pointer;
   align-self: center;
 }
 
-.toggleBtn::after{
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    height: 1.25rem;
-    width: 1.25rem;
-    background-color: #fff;
-    transition: left .3s;
+.toggleBtn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-color: #fff;
+  transition: left 0.3s;
 }
 
-.toggleBtn:checked{
-    background-color: #8d9299;
+.toggleBtn:checked {
+  background-color: #8d9299;
 }
 
-.toggleBtn:checked::after{
-    left: 70%;
+.toggleBtn:checked::after {
+  left: 70%;
 }
 
-.toggle_container{
-    display: flex;
+.toggle_container {
+  display: flex;
+}
+
+form {
+  margin-top: 2em;
+  position: relative;
+}
+
+#text {
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 1em 12em 1.063em 1.375em;
+  color: #2c2c2c;
+  font-size: 1.125rem;
+  font-family: Roboto;
+  outline: none;
+}
+
+#submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.125rem;
+  padding: 1em 1.5em 1.063em 1.5em;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  cursor: pointer;
+  background-color: #fff;
+  background-image: url('./images/search_black_36dp.svg');
+  background-repeat: no-repeat;
+  background-position: center;
 }
