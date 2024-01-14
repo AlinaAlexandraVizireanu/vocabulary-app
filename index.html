@@ -7,15 +7,24 @@
     <title>Vocabolario Italiano-Bergamasco</title>
   </head>
   <body>
-    <form action="#URL">
-      <input
-        type="text"
-        name="text"
-        id="text"
-        placeholder="Search for a word"
-      />
-      <input type="submit" name="submit" value="Search" />
-    </form>
+    <div class="container">
+      <div class="logo_container">
+        <img src="./Images/menu_book_black_48dp.svg" alt="opened book">
+        <div class="toggle_container">
+          <input type="checkbox" class="toggleBtn">
+          <img src="./Images/dark_mode_black_36dp.svg" alt="half-moon">
+        </div>
+      </div>
+      <form action="#URL">
+        <input
+          type="text"
+          name="text"
+          id="text"
+          placeholder="Search for a word"
+        />
+        <input type="submit" name="submit" value="Search" />
+      </form>
+    </div>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./app.js"></script>
   </body>
