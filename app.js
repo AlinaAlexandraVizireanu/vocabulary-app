@@ -1,6 +1,6 @@
 const form = document.querySelector("form");
 const input = document.querySelector("#text");
-
+const container = document.querySelector(".container");
 const displayWord = document.createElement("h1");
 
 form.addEventListener("submit", function (e) {
@@ -15,15 +15,16 @@ form.addEventListener("submit", function (e) {
         let data = response.data;
         let firstLetter = textInput[0].toUpperCase();
         let searchedData = data[firstLetter];
-
+        let word = "";
         for (let word in searchedData) {
           if (word.includes(textInput)) {
-            document.body.appendChild(displayWord);
+            container.appendChild(displayWord);
             displayWord.textContent = searchedData[word];
+            storedWord = word;
             break;
           }
         }
-        if (textInput != "") {
+        if (textInput != storedWord) {
           alert("The searched word does not exist");
         }
       })
