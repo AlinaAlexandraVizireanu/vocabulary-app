@@ -8,22 +8,28 @@
   </head>
   <body>
     <div class="container">
-      <div class="logo_container">
-        <img src="./images/menu_book_black_48dp.svg" alt="opened book">
-        <div class="toggle_container">
-          <input type="checkbox" class="toggleBtn">
-          <img src="./images/dark_mode_black_36dp.svg" alt="half-moon">
+      <header>
+        <div class="logo_container">
+          <img src="./images/menu_book_black_48dp.svg" alt="opened book" />
+          <div class="toggle_container">
+            <input type="checkbox" class="toggleBtn" />
+            <img src="./images/dark_mode_black_36dp.svg" alt="half-moon" />
+          </div>
         </div>
-      </div>
-      <form action="#URL">
-        <input
-          type="text"
-          name="text"
-          id="text"
-          placeholder="Search for a word"
-        />
-        <input type="submit" name="submit" value="" id="submit"/>
-      </form>
+        <form action="#URL">
+          <input
+            type="text"
+            name="text"
+            id="text"
+            placeholder="Search for a word"
+          />
+          <input type="submit" name="submit" value="" id="submit" />
+        </form>
+      </header>
+      <main class="main_content">
+        <div class="main_content-line"></div>
+        <h3 class="main_content-meaning">Meaning</h3>
+      </main>
     </div>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <script src="./app.js"></script>

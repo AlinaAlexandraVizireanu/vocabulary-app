@@ -1,7 +1,11 @@
 const form = document.querySelector("form");
 const input = document.querySelector("#text");
 const container = document.querySelector(".container");
+const mainContent = document.querySelector(".main_content");
+const line = document.querySelector(".main_content-line");
+const meaning = document.querySelector(".main_content-meaning");
 const displayWord = document.createElement("h1");
+const displayMeaning = document.createElement("p");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -15,11 +19,15 @@ form.addEventListener("submit", function (e) {
         let data = response.data;
         let firstLetter = textInput[0].toUpperCase();
         let searchedData = data[firstLetter];
-        let word = "";
+        let storedWord = "";
         for (let word in searchedData) {
           if (word.includes(textInput)) {
-            container.appendChild(displayWord);
-            displayWord.textContent = searchedData[word];
+            line.classList.add("visible");
+            meaning.classList.add("visible");
+            displayWord.textContent = word;
+            mainContent.insertBefore(displayWord, line);
+            displayMeaning.textContent = searchedData[word];
+            mainContent.insertBefore(displayMeaning, meaning.nextSibling);
             storedWord = word;
             break;
           }

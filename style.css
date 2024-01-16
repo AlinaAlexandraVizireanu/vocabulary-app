@@ -90,7 +90,39 @@ form {
   border-bottom-right-radius: 20px;
   cursor: pointer;
   background-color: #fff;
-  background-image: url('./images/search_black_36dp.svg');
+  background-image: url("./images/search_black_36dp.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.main_content {
+  margin-top: 3em;
+}
+
+.main_content-line {
+  border: 1px solid #2c2c2c;
+  margin-top: 0.5em;
+  margin-bottom: 1.5em;
+}
+
+.main_content-meaning{
+    margin-bottom: 1em;
+    color: #80848b;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+p{
+    font-size: 1.5rem;
+}
+
+.main_content-line,
+.main_content-meaning {
+  display: none;
+}
+
+.visible {
+  display: block;
 }
