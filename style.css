@@ -28,7 +28,7 @@ body {
   width: 60px;
   height: 30px;
   border-radius: 25px;
-  background-color: #3d5a80;
+  background-color: #2c2c2c;
   transition: background 0.3s;
   outline: none;
   cursor: pointer;
@@ -58,6 +58,8 @@ body {
 
 .toggle_container {
   display: flex;
+  justify-content: space-between;
+  width: 120px;
 }
 
 form {
@@ -119,6 +121,7 @@ h1 {
 
 p {
   font-size: 1.5rem;
+  font-weight: 300;
 }
 
 .main_content-line,
@@ -133,4 +136,15 @@ p {
 .dark-mode {
   color: #fff;
   background-color: #2c2c2c;
+}
+
+@media (max-width: 600px) {
+  #text {
+    font-size: 1rem;
+    padding: 1em 2.6em 1.063em 1.375em;
+  }
+
+  #submit {
+    font-size: 1rem;
+  }
 }
