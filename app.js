@@ -25,14 +25,14 @@ form.addEventListener("submit", function (e) {
         let searchedData = data[firstLetter];
         let storedWord = "";
         for (let word in searchedData) {
-          if (word.includes(textInput)) {
+          if (word.toLocaleLowerCase().includes(textInput)) {
             line.classList.add("visible");
             meaning.classList.add("visible");
             displayWord.textContent = word;
             mainContent.insertBefore(displayWord, line);
             displayMeaning.textContent = searchedData[word];
             mainContent.insertBefore(displayMeaning, meaning.nextSibling);
-            storedWord = word;
+            storedWord = word.toLocaleLowerCase();
             break;
           }
         }
