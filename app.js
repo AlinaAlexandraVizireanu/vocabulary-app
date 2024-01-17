@@ -13,7 +13,7 @@ const displayMeaning = document.createElement("p");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
-  let textInput = input.value;
+  let textInput = input.value.toLowerCase();
   if (textInput === "") {
     alert("Please search for a word");
   } else {
